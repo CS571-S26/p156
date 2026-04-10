@@ -1,0 +1,46 @@
+/* ===== Pane ===== */
+.pane {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    right: 0;
+    background-color: black;
+    transition: transform 0.3s ease, width 0.3s ease;
+    z-index: 100;
+}
+
+/* ===== Strip ===== */
+.strip {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.strip-toggle-draggable {
+    cursor: ew-resize;
+    border-left: 2px solid transparent;
+    box-shadow: -4px 0 8px rgba(255, 100, 255, 0.6); /* rainbow glow */
+}
+
+.strip-toggle-button {
+    height: 20%;
+    width: 80%;
+}
+
+/* ===== Content ===== */
+.content {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: mediumpurple;
+    overflow-y: auto;
+    border: 2px solid black;
+}
