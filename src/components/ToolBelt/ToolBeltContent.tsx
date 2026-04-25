@@ -12,9 +12,12 @@ export default function ToolBeltContent() {
         <div className="container-fluid content pe-5" style={{left: `${TOOL_BELT_STRIP_WIDTH_VW}vw`}}>
             <WordHeader></WordHeader>
             <button onClick={() => navigate(`/dictionary/${activeWordData?.word}`)}>View Full Page</button>
-            {dictionaryWordEntries && dictionaryWordEntries.map((entry => {
-                return <WordEntry entry={entry}></WordEntry>;
-            }))}
+            {dictionaryWordEntries && <div style={{display: "flex", flexDirection: "column", gap: "2vw"}}>
+                {dictionaryWordEntries.map((entry => {
+                    return <WordEntry entry={entry}></WordEntry>;
+                }))}
+            </div>
+            }
         </div>
     </>;
 }

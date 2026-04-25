@@ -1,4 +1,7 @@
+import type {ChipType} from "./chip.ts";
+
 export interface DictionaryWordType {
+    id: number
     word: string,
     ipaPronunciation: string,
     respelling: string,
@@ -11,10 +14,10 @@ export interface DictionaryWordEntryType {
     definition: string,
     partOfSpeech: string,
     example: string,
-    formality: string,
-    register: string,
-    domain: string,
-    currency: string,
-    synonyms: string[],
-    antonyms: string[]
+    chips: ChipType[]
+}
+
+export interface DictionaryRecommendationType {
+    id: number,
+    word: string
 }
