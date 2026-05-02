@@ -1,5 +1,5 @@
 import "./WordBuilder.css";
-import {type Dispatch, type SetStateAction, useEffect, useRef, useState} from "react";
+import {type Dispatch, type SetStateAction, useState} from "react";
 import type {DictionaryWordType} from "../../api/types/dictionary.ts";
 import {WordBuilderHeader} from "./WordBuilderHeader.tsx";
 
