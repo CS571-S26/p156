@@ -10,4 +10,4 @@ export interface UserType {
     email: string
     currentStreak: number,
     longestStreak: number
-}w
+}

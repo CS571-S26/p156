@@ -1,13 +1,11 @@
 import {useRef, useState} from "react";
 import useAuthContext from "../context/Auth/AuthContextHook.ts";
-import {useNavigate} from "react-router-dom";
 
 export default function LoginPage() {
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const [error, setError] = useState<Record<string, string> | null>(null);
     const {loginUser} = useAuthContext();
-    const navigate = useNavigate();
     const handleSubmit = async () => {
         const email = emailRef.current?.value;
         const password = passwordRef.current?.value;
@@ -37,6 +35,6 @@ export default function LoginPage() {
             </div>
             <button onClick={handleSubmit}>Submit</button>
         </div>
-        {error && Object.entries(error).map(([key, value]) => <p>{value}</p>)}
+        {error && Object.entries(error).map(([key, value]) => <p id={key}>{value}</p>)}
     </>;
 }

@@ -53,7 +53,7 @@ export default function RegisterPage() {
                 <input ref={confirmPasswordRef} type="password"/>
             </div>
             <button onClick={handleSubmit}>Submit</button>
-            {Object.entries(error).map(([key, value]) => <p>{value}</p>)}
+            {Object.entries(error).map(([key, value]) => <p id={key}>{value}</p>)}
         </div>
     </>;
 }

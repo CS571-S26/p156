@@ -1,5 +1,5 @@
 import "./Chip.css";
-import {type Dispatch, type EventHandler, type SetStateAction, useRef, useState} from "react";
+import {type Dispatch, type SetStateAction, useRef, useState} from "react";
 import {createChip} from "../../api/chipApi.ts";
 import {useNavigate} from "react-router-dom";
 import {useQueryClient} from "@tanstack/react-query";

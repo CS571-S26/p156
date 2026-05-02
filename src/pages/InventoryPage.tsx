@@ -1,5 +1,4 @@
 import {useQuery} from "@tanstack/react-query";
-import {useUserContext} from "../context/User/UserContextHooks.ts";
 import {getChips} from "../api/chipApi.ts";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";

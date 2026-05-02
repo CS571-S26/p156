@@ -8,7 +8,7 @@ import {UserContext} from "./UserContext.tsx";
 export default function UserContextProvider({children}: { children: React.ReactNode }) {
     const {isAuthenticated} = useAuthContext();
     const navigate = useNavigate();
-    const {data, isLoading, isError, error} = useQuery({
+    const {data, isError} = useQuery({
         queryKey: ["user"],
         queryFn: getMe,
         enabled: isAuthenticated
